@@ -1,3 +1,5 @@
+#!/usr/bin/env python3
+
 import os, sys, random, gzip, argparse
 
 parser = argparse.ArgumentParser(description=
