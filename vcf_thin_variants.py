@@ -55,15 +55,11 @@ print('Scaffold\tNum thinned variants\n')
 x = True
 while x:
     line = infile.readline()
-    print(line)
 
     if not line or line.split()[0] != scaf:
-        print(positions)
         targets = []
         rand = random.randint(0,len(positions)-1)
         start = positions[rand]
-        print(rand)
-        print(start)
         targets.append(positions[rand])
         upstream = positions[0:rand+1]
         upstream.reverse()
@@ -84,7 +80,6 @@ while x:
                 minbp = int(i)+args.bp
 
         targets.sort()
-        print(targets)
         for i in scaf_data:
             if i.split()[1] in targets:
                 outfile.write(i)
@@ -99,7 +94,6 @@ while x:
             positions.append(line.split()[1])
 
         if not line:
-            print('end')
             x = False
 
     else:
