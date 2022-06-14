@@ -59,7 +59,6 @@ while x:
 
     if not line or line.split()[0] != scaf:
         print(positions)
-##            print(scaf_data)
         targets = []
         rand = random.randint(0,len(positions)-1)
         start = positions[rand]
@@ -70,12 +69,8 @@ while x:
         upstream.reverse()
         downstream = positions[rand:]
 
-##            print(upstream)
-##            print(downstream)
-
         #gather upstream thinned positions
         minbp = int(start)-args.bp
-##            print(minbp)
         for i in upstream:
             if int(i) <= minbp:
                 targets.append(i)
